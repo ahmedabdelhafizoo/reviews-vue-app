@@ -1,0 +1,41 @@
+.rating-box {
+  display: inline-block;
+
+  .rating-container {
+    direction: rtl;
+
+    label {
+      display: inline-block;
+      color: #dde2e6;
+      cursor: pointer;
+      font-size: 18px;
+
+      @include maxExScreen {
+        font-size: 13px;
+      }
+
+      transition: color 0.2s;
+      margin-bottom: 0;
+
+      &:not(:first-of-type) {
+        margin-right: 5px;
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    label:hover,
+    label:hover~label,
+    input:checked~label {
+      color: gold;
+    }
+
+    &.view-only {
+      label {
+        pointer-events: none;
+      }
+    }
+  }
+}

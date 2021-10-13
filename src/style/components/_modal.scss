@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 9999;
+  overflow: auto;
+  padding: 20px 10px;
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+
+  &__container {
+    background: #fff;
+    width: 550px;
+    animation: zoom .3s ease forwards;
+    backface-visibility: hidden;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &__close-btn {
+    font-size: 36px;
+    padding: 0 11px;
+    background: none;
+    border: none;
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(.8);
+    opacity: .6;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
